@@ -1,0 +1,26 @@
+<!-- Estado vacío -->
+
+<div
+  class="empty-state"
+  *ngIf="products.length === 0">
+
+  <div class="warning-icon">
+    !
+  </div>
+
+  <p>No hay productos para mostrar</p>
+
+</div>
+
+<!-- Lista -->
+
+<div
+  class="products-container"
+  *ngIf="products.length > 0">
+
+  <app-product-card
+    *ngFor="let product of products"
+    [product]="product">
+  </app-product-card>
+
+</div>
