@@ -1,20 +1,11 @@
 <div class="card">
 
   <div class="info">
-
-    <span class="name">
-      {{ product.name }}
-    </span>
-
-    <span class="price">
-      ${{ product.price }}
-    </span>
-
+    <span class="name">{{ product.nombre }}</span>
+    <span class="price">{{ product.precio | currency:'USD':'symbol':'1.0-0' }}</span>
   </div>
 
-  <button
-    class="delete-btn"
-    (click)="deleteProduct()">
+  <button class="delete-btn" (click)="deleteProduct()">
     ✕
   </button>
 

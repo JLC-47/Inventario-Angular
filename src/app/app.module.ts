@@ -2,19 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './feature/products/products.component';
-import { ProductPageComponent } from './features/pages/product-page/product-page.component';
-import { ProductFormComponent } from './features/pages/components/product-form/product-form.component';
+import { ProductsModule } from './features/products/products.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductsComponent,
-    ProductPageComponent,
-    ProductFormComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
